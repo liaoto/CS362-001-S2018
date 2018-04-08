@@ -59,7 +59,7 @@ public class CalDay {
 		int year = cal.get(cal.YEAR);
 	
 		setDay(day);
-		setMonth(month+1);
+		setMonth(month+1); 
 		setYear(year);
 	
 		setAppts(new LinkedList<Appt>());
@@ -75,7 +75,7 @@ public class CalDay {
 	 */
 	public void addAppt(Appt appt) {
 		if (appt.getValid()) {
-			for (int i = 0; i < getAppts().size(); i++) {
+			for (int i = 1; i < getAppts().size(); i++) {  //BUG 4: For loop starts at 1 instead of 0
 				//Put the appointment in the correct order - finish this
 				if (((Appt)getAppts().get(i)).getStartHour() >
 										appt.getStartHour()) {
