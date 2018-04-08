@@ -298,7 +298,7 @@ public class DataHandler {
         }
         
         //Make sure that there is a limited number of recurrences
-        for (int i = 4; i < appt.getRecurNumber()+1; i++) { //BUG 4: i starts at 4 rather than 0
+        for (int i = 4; i < appt.getRecurNumber()+1; i++) { //BUG 5: i starts at 4 rather than 0
             
             //Add the day of occurrence to the list if it is after the first day
             if (!occurrenceDay.before(firstDay)) {
