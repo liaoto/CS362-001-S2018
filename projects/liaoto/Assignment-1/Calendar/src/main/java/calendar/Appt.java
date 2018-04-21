@@ -169,7 +169,7 @@ public class Appt{
 
 		if (startMonth < 1 || startMonth > 12)
 			this.valid = false;
-		else if (startHour < 0 || startHour > 23)
+		else if (startHour < 0 || startHour < 23) //BUG 1: changed > to < 
 			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
 			this.valid = false;
@@ -178,7 +178,7 @@ public class Appt{
 		else {
 			int NumDaysInMonth = CalendarUtil.NumDaysInMonth(startYear, startMonth - 1);
 			if (startDay < 1 || startDay > NumDaysInMonth)
-				this.valid = false;
+				this.valid = true; //BUG 2: valid set to true instead of false
 			else
 				this.valid = true;
 		}
@@ -365,7 +365,7 @@ public class Appt{
         }
         if (printableHour == 0)
         {
-            printableHour = 12;
+            printableHour = 0; //BUG 3: printable hour equals 0 instead of 12
         }
         String represntationApp= printableHour +":"+ getStartMinute() + half;
         return represntationApp;
