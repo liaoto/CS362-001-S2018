@@ -337,8 +337,6 @@ public class DataHandlerTest{
 	 
 	  Appt apptnew = new Appt(1,1,2019, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 
-	  
-	//  DayA.addAppt(apptnew);
 			  
 	  GregorianCalendar future = new GregorianCalendar(2019,5,25);
 	  CalDay Day2 = new CalDay(future);
@@ -357,7 +355,6 @@ public class DataHandlerTest{
   public void test17() throws Throwable   //tests reoccuring doesn't go into for loop because bug 5 makes it start at 4  **bug 5 changed due to this**
   {
 	  DataHandler data = new DataHandler("Save", true);
-	 // Appt appt1 = new Appt(1,1,2019, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	  int[] todayRecurDays = {2,3,4};
 	  Appt appt1 = new Appt(25, 10, 2,2,2018, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	  appt1.setValid();
@@ -415,7 +412,6 @@ public class DataHandlerTest{
   public void test18() throws Throwable   //Extra test cases for getAppOccurences
   {
 	  DataHandler data = new DataHandler("Save", true);
-	 // Appt appt1 = new Appt(1,1,2019, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	
 	  Appt appt1 = new Appt(25, 10, 2,2,2018, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	  appt1.setValid();
@@ -473,7 +469,6 @@ public class DataHandlerTest{
   public void test18A() throws Throwable   //Extra test cases for getAppOccurences
   {
 	  DataHandler data = new DataHandler("Save", true);
-	 // Appt appt1 = new Appt(1,1,2019, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	
 	  Appt appt1 = new Appt(25, 10, 1,3,2018, "Birthday Party", "This is my birthday party", "xyz@gmail.com");
 	  appt1.setValid();

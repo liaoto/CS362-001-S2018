@@ -111,10 +111,6 @@ public class CalDayTest{
 	  Day.addAppt(appt1);
 	  String fnVer = Day.getFullInfomrationApp(Day);
 	  assertEquals('P', fnVer.charAt(16));
-	//  System.out.println(Day.getFullInfomrationApp(Day));
-	//  System.out.println("3-25-1900\n\t1:30PM Hello Party This is my birthday party");
-	  
-	//  String wrtVer = "3-25-1900\n\t1:30PM Hello Party This is my birthday party";
 	
 	  
 	  GregorianCalendar today2 = new GregorianCalendar(1900,3-1,25);
@@ -174,74 +170,3 @@ public class CalDayTest{
   
 }
 	
-/*
-      public Appt(int startHour, int startMinute, 
-            int startDay, int startMonth, int startYear,
-             String title, String description, String emailAddress )
-
-			 */
-		/*		
-		public String getFullInfomrationApp( Object calday) {
-                    
-        Iterator itr = ((CalDay)calday).iterator();
-        
-        String buffer;
-        buffer = Integer.toString(((CalDay)calday).getMonth())+ "-"; 
-        buffer += Integer.toString(((CalDay)calday).getDay())+ "-";  
-        buffer += Integer.toString(((CalDay)calday).getYear())+ " "; 
-
-        Appt appointment;
-        
-        int minute;
-        int hour;
-        String minString;
-		String meridianString;
-        
-        //go through the day and get the data to display
-        while(itr.hasNext()){
-        	
-        	buffer += "\n\t";
-        	
-        	appointment = (Appt)itr.next();
-			
-			if(appointment.hasTimeSet()){
-				
-				//figure AM/PM notation
-				hour = appointment.getStartHour();
-				if(hour>12){
-					meridianString = "PM";
-				}
-				else{
-					meridianString = "AM";	
-				}
-				
-				//convert from 24 to 12 hour time
-				if(hour == 0){
-					hour = 12;	
-				}
-				else{
-					hour = hour%12;
-				}
-				
-				//add preceding zero to minutes less than 10
-				minute = appointment.getStartMinute();
-				if(minute < 10){
-					minString = new String("0" + Integer.toString(minute));
-				}
-				else{
-					minString = Integer.toString(minute);
-				}
-				
-				//create the string containing a data summary
-				buffer += hour + ":" + minString + meridianString + " ";
-
-			}
-				buffer += appointment.getTitle()+ " ";
-				buffer += appointment.getDescription()+ " ";
-				
-				
-        }
-        
-        
-        return buffer;
-    } */
