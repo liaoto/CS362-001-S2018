@@ -309,6 +309,7 @@ public class UrlValidator implements Serializable {
         }
 
         String scheme = urlMatcher.group(PARSE_URL_SCHEME);
+
         if (!isValidScheme(scheme)) {
             return false;
         }
